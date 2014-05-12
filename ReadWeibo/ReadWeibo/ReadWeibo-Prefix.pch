@@ -1,0 +1,33 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "UIView+RSAdditions.h"
+#endif
+
+
+
+#define kAppKey @"1132051221" //@"4187914368" @"2045436852"
+#define kRedirectURI @"https://api.weibo.com/oauth2/default.html"
+
+#define SCREEN_HEIGH [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define RGB(r, g, b)        [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+#define kURLStrOfCollection @"https://api.weibo.com/2/favorites.json"
+#define kURLStrOfStatus @"https://api.weibo.com/2/statuses/home_timeline.json"
+#define kURLStrOfPersonalStatus @"https://api.weibo.com/2/statuses/user_timeline.json"
+#define kURLStrOfFriends @"https://api.weibo.com/2/friendships/friends.json"
+#define kURLStrOfFollowers @"https://api.weibo.com/2/friendships/followers.json"
